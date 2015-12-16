@@ -39,4 +39,11 @@ public class TempConversionWindow extends JFrame implements ActionListener{
     public static double FtoC(double t){
 	return (t-32) * (5.0/9.0);
     }
+
+    public void actionPerformed(ActionEvent e){
+	String event=e.getActionCommand();
+	if (event.equals("Fahrenheit")){
+	    String s = degrees.getText();
+	}
+    }
 }
