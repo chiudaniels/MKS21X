@@ -9,7 +9,7 @@ public class TempConversionWindow extends JFrame implements ActionListener{
     
     public TempConversionWindow(){
 	this.setTitle("Temperature Converter");
-	this.setSize("600,400");
+	this.setSize(600,400);
 	this.setLocation(100,100);
 	this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 
@@ -43,12 +43,14 @@ public class TempConversionWindow extends JFrame implements ActionListener{
     public void actionPerformed(ActionEvent e){
 	String event=e.getActionCommand();
 	if (event.equals("Fahrenheit")){
-	    int s = parseInt(degrees.getText());
-	    answer.setText(CtoF(s));
+	    double s = Double.parseDouble(degrees.getText());
+	    String x= Double.toString(CtoF(s));
+	    answer.setText(x);
 	}
-	else if (event.equals("Celcius"){
-		int s=parseInt(degrees.getText());
-		answer.setText(FtoC(s));
+	else if (event.equals("Celcius")){
+		double s=Double.parseDouble(degrees.getText());
+		String x= Double.toString(FtoC(s));
+		answer.setText(x);
 	    }
     }
 }
