@@ -1,4 +1,4 @@
-public class BarCode  implements Comparable{
+public class BarCode implements Comparable{
     // instance variables
     private String _zip;
     private int _checkDigit;
@@ -13,7 +13,7 @@ public class BarCode  implements Comparable{
 	_checkDigit = checkSum();
     }
 
-    private static final String [] barcode ={"||:::",":::||","::|:|","::||:",":|::|",":|:|:",":||::","|:::|","|::|:","|:|::"};
+    private static final String [] barcode ={"||:::",":::||","::|:|","::||:",":|::|",":|:|:",":||::","|:::|","|::|:","|:|::"}
 	
     // postcondition: Creates a copy of a bar code.
     public BarCode(BarCode x){
@@ -32,11 +32,11 @@ public class BarCode  implements Comparable{
     //postcondition: format zip + check digit + barcode 
     //ex. "084518  |||:::|::|::|::|:|:|::::|||::|:|"      
     public String toString(){
-	String result="";
-	for (int x=0; x<_zip.length(); x++){
-	    result += barcode[_zip.charAt(x)];
+	String result ="";
+	String barcode="";
+	for (int x; x<_zip.length(); x++;){
+	    barcode += 
 	}
-	return _zip + checkSum() + "  " + barcode;
     }
 
 
