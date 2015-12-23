@@ -53,7 +53,17 @@ public class BarCode implements Comparable{
     // true when they match.
 
 
-    public int compareTo(Comparable other){}
+    public int compareTo(Comparable other){
+	if (Integer.parseInt(this._zip+this.checkSum()) > Integer.parseInt(other._zip+other.checkSum())){
+	    return 1;
+	}
+	else if (Integer.parseInt(this._zip+this.checkSum()) ==  Integer.parseInt(other._zip+other.checkSum())){
+	    return 0;
+	}
+	else{
+	    return -1;
+	}
+    }
     // postcondition: compares the zip + checkdigit 
 
 }
