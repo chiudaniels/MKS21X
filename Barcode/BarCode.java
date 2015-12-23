@@ -1,4 +1,4 @@
-public class BarCode  implements Comparable{
+public class BarCode implements Comparable{
     // instance variables
     private String _zip;
     private int _checkDigit;
@@ -40,7 +40,14 @@ public class BarCode  implements Comparable{
     }
 
 
-    public boolean equals(Object other){}
+    public boolean equals(Object other){
+	if (!other.getClass().equals(this.getClass())){
+	    return false;
+	}
+	else {
+	    return toString().equals(other.toString());
+	}
+    }
     // postcondition: false if the object is not a BarCode, 
     // false if it is a non-matching barcode
     // true when they match.
