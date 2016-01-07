@@ -4,7 +4,7 @@ public class driver{
 	//System.out.println(Sorts.smallestNum(arrayName));
 	Sorts.printArray( arrayName);
 	//Sorts.printNum( arrayName);
-	Sorts.insertionSort( arrayName);
+	Sorts.bubbleSort( arrayName);
 	Sorts.printArray( arrayName);
     }
 }

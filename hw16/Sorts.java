@@ -37,7 +37,19 @@ public class Sorts{
 		data [x-1] = data [x];
 		data[x] = temp;
 		x--;
-	        System.out.println(Arrays.toString(data));
+	    }
+	}
+    }
+
+    public static void bubbleSort(int [] data){
+	int temp=0;
+	for (int y=0; y<data.length; y++){
+	    for (int x=0; x<data.length; x++){
+		while (x+1<data.length && data[x] > data [x+1]){
+		    temp = data[x+1];
+		    data [x+1]= data[x];
+		    data [x] = temp;
+		}
 	    }
 	}
     }
