@@ -1,0 +1,47 @@
+import java.util.Arrays;
+public class Sorts{
+    public static void printArray(int[]data){
+	System.out.print (Arrays.toString(data));
+    }
+
+    public static void printNum(int[]data){
+	System.out.print(smallestNum(data));
+    }
+    
+    public static void insertionSort(int[]data){
+	int x=0;
+	int y=0;
+	while (x<data.length){
+	    if (data[x]==data[smallestNum(data)]){
+		x++;
+	    }
+	    else{
+		int z=0;
+		y=data[x];
+		z= smallestNum(data);
+		data[x]=z;
+		data[z]=y;
+	    }
+	}
+    }
+
+    public static int smallestNum(int[]data){
+	int x=0;
+	int y=x+1;
+	int z=0;
+	while (y<data.length){
+	    if (data[x]<data[y]){
+		y++;
+	        z= x;
+		return z;
+	    }
+	    else {
+		z= y;
+		return z;
+	    }	
+	}
+	return z;
+    }
+}
+
+	
