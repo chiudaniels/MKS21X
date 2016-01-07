@@ -26,18 +26,20 @@ public class Sorts{
 	    }
 	    
 	}
-	// while (x<data.length){
-	//     if (data[x]==data[smallestNum(data)]){
-	// 	x++;
-	//     }
-	//     else{
-	// 	int z=0;
-	// 	y=data[x];
-	// 	z= smallestNum(data);
-	// 	data[x]=z;
-	// 	data[z]=y;
-	//     }
-	// }
+    }
+
+    public static void insertionSort(int [] data){
+	int temp=0;
+	for (int x=1; x<data.length; x++){
+	    int y=1;
+	    while (x-y >= 0 && data[x] < data [x-y]){
+		temp = data[x-1];
+		data [x-1] = data [x];
+		data[x] = temp;
+		x--;
+	        System.out.println(Arrays.toString(data));
+	    }
+	}
     }
 
     public static int smallestNum(int[]data){
